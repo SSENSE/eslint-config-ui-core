@@ -31,6 +31,26 @@ For client-side projects (only one supported at the moment)
 
 `/client` specializations are that it permits browser globals, requires the `react` plugin.
 
+# CLI eslint
+
+We can preview all linting errors from the command line by running:
+```shell
+./node_modules/.bin/eslint **
+```
+
+We can also run it with --fix, which should fix most of the problems:
+```shell
+./node_modules/.bin/eslint ** --fix
+```
+
+Or even better we can add a script to package.json which runs this for us:
+```json
+"lint": "./node_modules/.bin/eslint 'app/**'",
+"lint:fix": "./node_modules/.bin/eslint 'app/**' --fix",
+```
+
+In this particular case, we are validating everything inside our /app folder
+
 
 # Extends
 
@@ -45,3 +65,11 @@ Provides rules that help prevent import bugs and enforces style.
 
 ### `react` https://github.com/yannickcr/eslint-plugin-react[↗]
 React specific linting rules for ESLint
+
+
+
+# Rules
+
+This section contains documentation about certain (not all) rules we enforce. Each rule section contains rationale and pass/fail examples. Over time we will complete exhaustive documentation. So far we have focused on significant deviations from our AirBnB inheritance.
+
+(..@todo)
