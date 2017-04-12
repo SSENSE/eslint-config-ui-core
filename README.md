@@ -1,19 +1,47 @@
 # eslint-config-ui-core
 
-# Example
-npm create package demo
+# SSENSE JavaScript Style Guide for core Services
+
+# Installation
+
 ```shell
-$npm i sensitive-words -S
+npm install --save-dev eslint eslint-config-ui-core
 ```
 
-```javascript
-const {sensitiveWords} = require(sensitive-words);
-// ES2015 modules
-import {sensitiveWords} from 'sensitive-words';
+Because of the https://github.com/eslint/eslint/issues/3458[current inability for sharable configs] to supply their dependencies you will also need to:
 
-const filtered = sensitiveWords(
-    'the new apple macbook pro has a touchbar',['pro', 'touchbar']
-);
-
-console.log(filtered);
+```shell
+npm install --save-dev \
+  babel-eslint \
+  eslint-config-airbnb \
+  eslint-plugin-import \
+  eslint-plugin-react
 ```
+
+# Usage
+
+Edit your `package.json`
+
+For client-side projects (only one supported at the moment)
+```json
+  "eslintConfig": {
+    "extends": "ssense/client"
+  }
+```
+
+`/client` specializations are that it permits browser globals, requires the `react` plugin.
+
+
+# Extends
+
+### `airbnb-base` https://github.com/airbnb/javascript[↗]
+
+We extend the AirBnB rules for historical reasons. Our configuration will continue to evolve and may not be based on it one day if we eventually disable or adjust too much of it via overrides.
+
+# Plugins
+
+### `import` https://github.com/benmosher/eslint-plugin-import[↗]
+Provides rules that help prevent import bugs and enforces style.
+
+### `react` https://github.com/yannickcr/eslint-plugin-react[↗]
+React specific linting rules for ESLint

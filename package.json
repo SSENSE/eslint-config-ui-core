@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ui-core",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "JavaScript code standards at SSENSE - React Apps",
   "main": "index.js",
   "scripts": {
