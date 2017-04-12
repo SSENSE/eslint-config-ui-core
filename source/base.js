@@ -1,80 +1,47 @@
 module.exports = {
-  extends: ["airbnb-base"],
-
-  parser: "babel-eslint",
-
-  parserOptions: {
-    ecmaVersion: 2017,
-    sourceType: "module",
-    ecmaFeatures: {
-      impliedStrict: true,
-      experimentalObjectRestSpread: true,
+    root: true,
+    parser: 'babel-eslint',
+    parserOptions: {
+        sourceType: 'module',
     },
-  },
-  plugins: ["import", "fp"],
-  env: {
-    mocha: true
-  },
-  rules: {
-
-    // Misc
-
-    semi: [1, "never"],
-    quotes: [1, "double"],
-    "comma-dangle": [1, "only-multiline"],
-    "no-multiple-empty-lines": [1, { max: 3 }],
-
-    // Import
-
-    "import/no-namespace": 1,
-    "import/no-commonjs": 1,
-    "import/no-extraneous-dependencies": [
-      2,
-      {
-        devDependencies: [
-          "**/*.test.js",
-          "**/*.spec.js",
-        ],
-      },
+    env: {
+        browser: true,
+        node: true,
+    },
+    plugins: [
+        'react',
     ],
-    "import/order": [
-      1,
-      {
-        groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
-        "newlines-between": "never",
-      },
-    ],
+    ecmaFeatures: {
+        globalReturn: false,
+        jsx: true,
+    },
+    extends: 'airbnb-base',
+    // add custom rules here
+    rules: {
+    // DEFAULT
+        // description: disable the rule specifically for param properties
+            'no-param-reassign': [2, { props: false }],
+        // description: indent 4 spaces and aligns switchcase
+            'indent': [2, 4, { SwitchCase: 1 }],
+        // description: fixes global var jsx declaration
+            'no-unused-vars': 0,
+        // description: max 200 characters per line, give warning
+            'max-len': ['warn', 120],
+        // description: exceptions for React usage
+            'class-methods-use-this': 0,
+        // description: exception for inclusion at the end of for loops
+            'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
+        // description: allow debugger during development
+            'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+            
+    // IMPORT
+        // description: dont require extensions for imports
+            'import/extensions': 0,
+        // description: webpack unresolved module loading react components
+            'import/no-unresolved': 0,
 
-    // Functional Programming
-
-    "fp/no-arguments": 2,
-    "fp/no-class": 2,
-    "fp/no-delete": 2,
-    "fp/no-events": 2,
-    "fp/no-get-set": 2,
-    "fp/no-let": 2,
-    "fp/no-loops": 2,
-    "fp/no-this": 2,
-
-    // Disable
-
-    "space-before-function-paren": 0,
-    "operator-linebreak": 0,
-    "object-curly-spacing": 0,
-    "no-nested-ternary": 0,
-
-    // Consider
-
-    // fp/no-mutating-assign: 2
-    // fp/no-mutating-methods: 2
-    // fp/no-mutation: 2
-    // fp/no-nil: 2
-    // fp/no-rest-parameters: 2
-    // fp/no-throw: 2
-    // https://github.com/jfmengels/eslint-plugin-lodash-fp
-    // https://github.com/xjamundx/eslint-plugin-promise
-    // https://github.com/johnstonbl01/eslint-no-inferred-method-name
-    // https://github.com/selaux/eslint-plugin-filenames
-    // https://github.com/gajus/eslint-plugin-jsdoc
-  },
-}
+    // REACT
+        // desc: require prop types
+            'react/prop-types': [2],
+        },
+};

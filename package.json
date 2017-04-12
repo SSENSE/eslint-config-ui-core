@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-ssense",
+  "name": "eslint-config-ssense-react",
   "version": "0.1.0",
-  "description": "JavaScript code standards at SSENSE",
+  "description": "JavaScript code standards at SSENSE - React Apps",
   "main": "index.js",
   "scripts": {
     "postversion": "git push && git push --tags && npm publish"
@@ -22,13 +22,13 @@
   "homepage": "https://github.com/SSENSE/eslint-config#readme",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^3.12.2"
+    "eslint": "^3.15.0",
   },
   "peerDependencies": {
     "babel-eslint": "^7.1.1",
     "eslint": ">= 3",
-    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-fp": "^2.2.0"
+    "eslint-plugin-react": "^6.9.0",
   }
 }
