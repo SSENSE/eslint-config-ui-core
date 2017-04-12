@@ -33,7 +33,7 @@ module.exports = {
             'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
         // description: allow debugger during development
             'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-            
+
     // IMPORT
         // description: dont require extensions for imports
             'import/extensions': 0,
