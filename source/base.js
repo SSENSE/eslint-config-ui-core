@@ -36,9 +36,9 @@ module.exports = {
         // description: provides consistent linebreak style for operators, DISABLED
             'operator-linebreak': 0,
         // description: disallows nested ternary expressions, DISABLED
-            'no-nested-ternary': 0
+            'no-nested-ternary': 0,
         // description: consistency around empty line padding inside blocks
-            'padded-blocks': 1
+            'padded-blocks': 1,
 
     // IMPORT
         // description: dont require extensions for imports, DISABLED
