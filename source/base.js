@@ -9,7 +9,7 @@ module.exports = {
         node: true,
     },
     plugins: [
-        'react',
+        'import',
     ],
     ecmaFeatures: {
         globalReturn: false,
@@ -23,25 +23,48 @@ module.exports = {
             'no-param-reassign': [2, { props: false }],
         // description: indent 4 spaces and aligns switchcase
             'indent': [2, 4, { SwitchCase: 1 }],
-        // description: fixes global var jsx declaration
+        // description: fixes global var jsx declaration, DISABLED
             'no-unused-vars': 0,
         // description: max 200 characters per line, give warning
             'max-len': ['warn', 120],
-        // description: exceptions for React usage
+        // description: exceptions for React usage, DISABLED
             'class-methods-use-this': 0,
         // description: exception for inclusion at the end of for loops
             'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
         // description: allow debugger during development
             'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+        // description: provides consistent linebreak style for operators, DISABLED
+            'operator-linebreak': 0,
+        // description: disallows nested ternary expressions, DISABLED
+            'no-nested-ternary': 0
+        // description: consistency around empty line padding inside blocks
+            'padded-blocks': 1
 
     // IMPORT
-        // description: dont require extensions for imports
+        // description: dont require extensions for imports, DISABLED
             'import/extensions': 0,
-        // description: webpack unresolved module loading react components
+        // description: webpack unresolved module loading react components, DISABLED
             'import/no-unresolved': 0,
+        // description: reports if namespace is used
+            'import/no-namespace': 1,
+        // description: reports require function calls
+            'import/no-commonjs': 1,
+        // description: Forbid the import of external modules that are not declared in the package.json
+            'import/no-extraneous-dependencies': [
+                2, {
+                    'devDependencies': [
+                        '**/*.test.js',
+                        '**/*.spec.js'
+                    ]
+                }
+            ],
+        // description: enforce a convention order for loading modules
+        // not sure we need to be this strict, import/first already sets some basic rules.
+            'import/order': [
+                0, {
+                    'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']
+                }
+            ]
 
-    // REACT
-        // desc: require prop types
-            'react/prop-types': [2],
         },
 };
