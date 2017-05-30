@@ -2,7 +2,13 @@ module.exports = {
     root: true,
     parser: 'babel-eslint',
     parserOptions: {
+        ecmaVersion: 2017,
         sourceType: 'module',
+        impliedStrict: true,
+        ecmaFeatures: {
+            globalReturn: false,
+            jsx: true,
+        },
     },
     env: {
         browser: true,
@@ -11,10 +17,6 @@ module.exports = {
     plugins: [
         'import',
     ],
-    ecmaFeatures: {
-        globalReturn: false,
-        jsx: true,
-    },
     extends: 'airbnb-base',
     // add custom rules here
     rules: {
