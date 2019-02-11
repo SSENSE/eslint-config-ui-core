@@ -1,7 +1,7 @@
 {
   "name": "@ssense/eslint-config-ui-core",
   "version": "0.3.1",
-  "description": "JavaScript code standards at SSENSE",
+  "description": "JavaScript code standards for Backend Services at SSENSE",
   "main": "index.js",
   "private": false,
   "scripts": {
@@ -16,7 +16,13 @@
     "eslint",
     "eslintconfig"
   ],
-  "author": "",
+  "author": "SSENSE Dev Team",
+  "contributors": [
+    {
+      "name": "Pablo Rincon",
+      "email": "pablo.rincon@ssense.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SSENSE/eslint-config-ui-core/issues"

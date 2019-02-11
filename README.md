@@ -1,14 +1,14 @@
 # eslint-config-ui-core
 
-# SSENSE JavaScript Style Guide for core Services
+# SSENSE JavaScript Style Guide for Backend Services
 
 # Installation
 
 ```shell
-npm install --save-dev eslint eslint-config-ui-core
+npm install --save-dev eslint @ssense/eslint-config-ui-core
 ```
 
-Because of the https://github.com/eslint/eslint/issues/3458[current inability for sharable configs] to supply their dependencies you will also need to:
+Because of the https://github.com/eslint/eslint/issues/3458 [current inability for sharable configs] to supply their dependencies you will also need to:
 
 ```shell
 npm install --save-dev \
