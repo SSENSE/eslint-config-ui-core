@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "description": "JavaScript code standards at SSENSE",
   "main": "index.js",
+  "private": false,
   "scripts": {
     "postversion": "git push && git push --tags",
     "release": "np --any-branch"
