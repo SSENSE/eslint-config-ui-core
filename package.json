@@ -1,11 +1,11 @@
 {
-  "name": "eslint-config-ui-core",
+  "name": "@ssense/eslint-config-ui-core",
   "version": "0.2.2",
   "description": "JavaScript code standards at SSENSE",
   "main": "index.js",
   "scripts": {
     "postversion": "git push && git push --tags",
-    "release": "np"
+    "release": "np --any-branch"
   },
   "repository": {
     "type": "git",
