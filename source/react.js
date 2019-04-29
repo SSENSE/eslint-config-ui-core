@@ -5,6 +5,6 @@ module.exports = {
     },
     rules: {
         // desc: require prop types
-            'react/prop-types': [2],
+            'react/prop-types': 0,
     }
 }
