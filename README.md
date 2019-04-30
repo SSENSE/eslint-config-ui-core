@@ -8,7 +8,7 @@
 npm install --save-dev eslint eslint-config-ui-core
 ```
 
-Because of the https://github.com/eslint/eslint/issues/3458[current inability for sharable configs] to supply their dependencies you will also need to:
+Because of this issue: https://github.com/eslint/eslint/issues/3458 (current inability for sharable configs) to supply their dependencies you will also need to:
 
 ```shell
 npm install --save-dev \
@@ -45,8 +45,8 @@ We can also run it with --fix, which should fix most of the problems:
 
 Or even better we can add a script to package.json which runs this for us:
 ```json
-"lint": "./node_modules/.bin/eslint 'app/**'",
-"lint:fix": "./node_modules/.bin/eslint 'app/**' --fix",
+"lint": "eslint 'app/**'",
+"lint:fix": "eslint 'app/**' --fix",
 ```
 
 In this particular case, we are validating everything inside our /app folder
