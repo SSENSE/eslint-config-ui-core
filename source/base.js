@@ -24,18 +24,14 @@ module.exports = {
         // description: disable the rule specifically for param properties
             'no-param-reassign': [2, { props: false }],
         // description: indent 4 spaces and aligns switchcase
-            'indent': [
-                2,
-                4,
-                {
-                    SwitchCase: 1,
-                    MemberExpression: 1,
-                    ObjectExpression: 1,
-                    CallExpression: {
-                        arguments: 1
-                    }
+            'indent': [2, 4, {
+                SwitchCase: 1,
+                MemberExpression: 1,
+                ObjectExpression: 1,
+                CallExpression: {
+                    arguments: 1
                 }
-            ],
+            }],
         // description: fixes global var jsx declaration, DISABLED
             'no-unused-vars': 0,
         // description: max 200 characters per line, give warning
