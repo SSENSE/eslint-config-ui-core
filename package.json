@@ -1,6 +1,6 @@
 {
   "name": "@ssense/eslint-config-ui-core",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "JavaScript code standards for Backend Services at SSENSE",
   "main": "index.js",
   "private": false,
