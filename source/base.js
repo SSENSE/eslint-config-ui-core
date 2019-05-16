@@ -73,7 +73,27 @@ module.exports = {
                 0, {
                     'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']
                 }
-            ]
+            ],
+        // Require async functions to await something
+            "require-await": 1,
+        
+        // Warn when a todo comment is written
+            "no-warning-comments": ["warn", {
+                "terms": [
+                    "todo",
+                    "@todo"
+                ]
+            }],
 
+            "arrow-parens": [
+                0,
+                "always"
+            ],
+            
+            "comma-dangle": [
+                1,
+                "only-multiline"
+            ],
+        
         },
 };
